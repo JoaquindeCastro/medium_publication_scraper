@@ -4,7 +4,8 @@ import pandas
 from datetime import datetime
 
 # GET ACTUAL CONTENT
-url='https://medium.com/feed/@joaquindecastro'
+name = input('what is your Medium username')
+url='https://medium.com/feed/@' + str(name)
 response = requests.get(url)
 content = BeautifulSoup(response.content, 'html.parser')
 
